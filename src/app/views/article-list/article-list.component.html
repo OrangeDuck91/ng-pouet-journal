@@ -1,8 +1,6 @@
 <h2>Article list</h2>
 
-
-<div *ngFor="let article of articles">
-  {{article.title}}
-</div>
-
-<!-- <a1-article-list-item *ngFor="let article of articles"></a1-article-list-item> -->
+<a1-article-list-item 
+      *ngFor="let article of articles" 
+      [article]="article">
+</a1-article-list-item>

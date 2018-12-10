@@ -1,3 +1,5 @@
-<p>
-  article-list-item works!
-</p>
+<div class="article-card">
+  <h2><a routerLink="/article/{{article.id}}">{{article.title}}</a></h2>
+  <img src="{{article.picture}}" alt="article photo">
+  <span>{{article.intro}}</span>
+</div>

@@ -1,3 +1,6 @@
-<p>
-  article-detail works!
-</p>
+<div *ngIf="article">
+  <h2>{{article.title}}</h2>
+  <img src="{{article.picture}}" alt="article photo">
+  <span>{{article.intro}}</span>
+  <p>{{article.text}}</p>
+</div>

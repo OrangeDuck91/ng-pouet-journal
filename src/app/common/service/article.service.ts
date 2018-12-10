@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Article } from '../model/article.model';
 import { Observable, of } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ArticleService {
 
   constructor() { }
@@ -29,7 +27,7 @@ const MOCK_ARTICLES = [
     title: 'Article 1',
     intro: 'Ceci est l\'intro de l\'article 1.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article1.png',
+    picture: '../assets/images/article1.jpg',
     tags: ['science', 'space']
   },
   {
@@ -37,7 +35,7 @@ const MOCK_ARTICLES = [
     title: 'Article 2',
     intro: 'Ceci est l\'intro de l\'article 2.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article2.png',
+    picture: '../assets/images/article2.jpg',
     tags: ['science', 'medecine']
   },
   {
@@ -45,7 +43,7 @@ const MOCK_ARTICLES = [
     title: 'Article 3',
     intro: 'Ceci est l\'intro de l\'article 3.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article3.png',
+    picture: '../assets/images/article3.jpg',
     tags: ['sport', 'hockey']
   },
   {
@@ -53,7 +51,7 @@ const MOCK_ARTICLES = [
     title: 'Article 4',
     intro: 'Ceci est l\'intro de l\'article 4.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article4.png',
+    picture: '../assets/images/article4.jpg',
     tags: ['sport', 'motoGP']
   },
   {
@@ -61,7 +59,7 @@ const MOCK_ARTICLES = [
     title: 'Article 5',
     intro: 'Ceci est l\'intro de l\'article 5.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article5.png',
+    picture: '../assets/images/article5.jpg',
     tags: ['politics', 'trump']
   },
   {
@@ -69,7 +67,7 @@ const MOCK_ARTICLES = [
     title: 'Article 6',
     intro: 'Ceci est l\'intro de l\'article 6.',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    picture: '../assets/images/article6.png',
+    picture: '../assets/images/article6.jpg',
     tags: ['politics', 'yellow jackets']
   }
 ] as Article[];
