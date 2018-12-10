@@ -1,8 +1,18 @@
-<ul>
-  <li><a routerLink="/home/">Home</a></li>
-  <li><a routerLink="/home/science">Science</a></li>
-  <li><a routerLink="/home/sport">Sports</a></li>
-  <li><a routerLink="/home/politics">Politics</a></li>
-  <li><a routerLink="/contact">Contact</a></li>
-  <!-- <li><a routerLink="/article/1">Detail</a></li> -->
-</ul>
+<div id="menu">
+  <div class="menu-level-1" *ngFor="let menuEntry of menu">
+    <span>
+      <a [routerLink]="menuEntry.route">
+        {{menuEntry.title}}
+      </a>
+    </span>
+    <div class="menu-level-2" 
+          *ngIf="menuEntry.subMenu" 
+          [hidden]="!menuEntry.ishovered">
+      <span *ngFor="let menusubEntry of menuEntry.subMenu">
+        <a [routerLink]="menusubEntry.route">
+          {{menusubEntry.title}}
+        </a>
+      </span>
+    </div>
+  </div>
+</div>

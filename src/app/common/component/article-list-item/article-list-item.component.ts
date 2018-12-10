@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Article } from '../../model/article.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'a1-article-list-item',
@@ -11,9 +12,13 @@ export class ArticleListItemComponent implements OnInit {
   @Input()
   article: Article;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  gotToDetail() {
+    this.router.navigate(['/article', this.article.id]);
   }
 
 }

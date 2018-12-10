@@ -7,6 +7,9 @@
   img{
     max-width: 300px;
     max-height: 200px;
+    border: 1px solid #0000008f;
+    // border-bottom: 20px solid #0000008f;
+    box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
   }
   span{
     padding-left: 15px;
@@ -17,4 +20,5 @@
   margin-bottom: 25px;
   border-bottom: 2px solid #8080806b;
   padding-bottom: 20px;
+  cursor: pointer;
 }
