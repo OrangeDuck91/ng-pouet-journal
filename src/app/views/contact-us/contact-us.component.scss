@@ -1,0 +1,49 @@
+input[type=text], 
+select, 
+textarea,
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+textarea{
+  height: 150px;
+  resize: none;
+}
+
+.form-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+
+  .message-sent{
+    transition: all .3s;
+    background-color: lightgreen;
+    border: 2px solid green; 
+    border-radius: 3px;
+    width: calc(100% - 140px);
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+  }
+  
+  .send-button{
+    border-radius: 2px;
+    background-color: lightblue;
+    background-image: url('/assets/images/send.png');
+    height: 50px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #c6cde2;
+  }
+  .send-button:hover{
+    border: 2px solid #101415;
+  }
+}

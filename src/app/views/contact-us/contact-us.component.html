@@ -1,3 +1,35 @@
-<p>
-  contact-us works!
-</p>
+<h2>A question ? An idea ? Contact us !</h2>
+
+<form>
+
+  <input type="text" 
+    placeholder="Name" 
+    name="name" 
+    [(ngModel)]="formData.name" 
+    required>
+  <br>
+
+  <input type="email" 
+    placeholder="toto@tata.com" 
+    name="email" 
+    [(ngModel)]="formData.email" 
+    required>
+  <br>
+
+  <textarea placeholder="Votre message"
+    name="message"
+    [(ngModel)]="formData.message"
+    required></textarea>
+  <br>
+
+</form>
+<div class="form-footer">
+  <div class="message-sent"
+    [style.opacity]="messageSent ? '1' : '0'" 
+    [style.visibility]="messageSent ? 'visible' : 'hidden'"> 
+    Your message has been sent succesfully
+  </div>
+
+  <div class="send-button" (click)="sendMessage()">
+  </div>
+</div>
