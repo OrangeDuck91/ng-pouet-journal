@@ -29,7 +29,7 @@ export class TopNavBarComponent {
     },
     {
       title: 'Sports',
-      route: '/home/science',
+      route: '/home/sport',
       subMenu: [
         {
           title: 'MotoGP',

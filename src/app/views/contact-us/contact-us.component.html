@@ -24,11 +24,14 @@
 
 </form>
 <div class="form-footer">
-  <div class="message-sent"
-    [style.opacity]="messageSent ? '1' : '0'" 
-    [style.visibility]="messageSent ? 'visible' : 'hidden'"> 
+  <div class="message-sent" [hidden]="!messageSent"> 
     Your message has been sent succesfully
   </div>
+  <div class="error-message" [hidden]="!errorMessage"> 
+    All fields must be filled.
+  </div>
+  <!-- This is just a filler div so that the button stays right -->
+  <div style="flex:1" [hidden]="errorMessage && messageSent"></div>
 
   <div class="send-button" (click)="sendMessage()">
   </div>
