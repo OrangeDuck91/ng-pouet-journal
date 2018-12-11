@@ -1,13 +1,17 @@
 <div id="menu">
-  <div class="menu-level-1" *ngFor="let menuEntry of menu">
+  <div class="menu-level-1" 
+       *ngFor="let menuEntry of menu" 
+       (mouseenter)="onEnter(menuEntry)" 
+       (mouseleave)="onLeave(menuEntry)">
     <span>
       <a [routerLink]="menuEntry.route">
         {{menuEntry.title}}
       </a>
     </span>
     <div class="menu-level-2" 
-          *ngIf="menuEntry.subMenu" 
-          [hidden]="!menuEntry.ishovered">
+         *ngIf="menuEntry.subMenu" 
+         [style.opacity]="menuEntry.ishovered ? '1' : '0'" 
+         [style.visibility]="menuEntry.ishovered ? 'visible' : 'hidden'">
       <span *ngFor="let menusubEntry of menuEntry.subMenu">
         <a [routerLink]="menusubEntry.route">
           {{menusubEntry.title}}

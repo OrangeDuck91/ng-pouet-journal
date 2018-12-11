@@ -6,7 +6,7 @@ import { MenuEntry } from '../../model/menu-entry.model';
   templateUrl: './top-nav-bar.component.html',
   styleUrls: ['./top-nav-bar.component.scss']
 })
-export class TopNavBarComponent  {
+export class TopNavBarComponent {
 
   menu: MenuEntry[] = [
     {
@@ -62,5 +62,13 @@ export class TopNavBarComponent  {
   ] as MenuEntry[];
 
   constructor() { }
+
+  onEnter(entry: MenuEntry) {
+    entry.ishovered = true;
+  }
+
+  onLeave(entry: MenuEntry) {
+    entry.ishovered = false;
+  }
 
 }
