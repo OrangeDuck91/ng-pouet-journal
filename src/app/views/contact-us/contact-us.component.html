@@ -6,6 +6,7 @@
     placeholder="Name" 
     name="name" 
     [(ngModel)]="formData.name" 
+    [ngClass]="(errorMessage && !formData.name )? 'hasErrors' : '' "
     required>
   <br>
 
@@ -13,12 +14,14 @@
     placeholder="toto@tata.com" 
     name="email" 
     [(ngModel)]="formData.email" 
+    [ngClass]="(errorMessage && !formData.email )? 'hasErrors' : '' "
     required>
   <br>
 
   <textarea placeholder="Votre message"
     name="message"
     [(ngModel)]="formData.message"
+    [ngClass]="(errorMessage && !formData.message )? 'hasErrors' : '' "
     required></textarea>
   <br>
 

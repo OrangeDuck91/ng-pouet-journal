@@ -16,6 +16,10 @@ textarea{
   resize: none;
 }
 
+input.hasErrors, textarea.hasErrors{
+  background-color: lightcoral;
+}
+
 .form-footer{
   display: flex;
   justify-content: space-between;
