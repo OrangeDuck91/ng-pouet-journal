@@ -1,6 +1,8 @@
-<div *ngIf="article" class="article-detail">
+<article *ngIf="article">
   <h2>{{article.title}}</h2>
-  <img src="{{article.picture}}" alt="article photo">
+  <figure>
+    <img src="{{article.picture}}" alt="article photo">
+  </figure>
   <span>{{article.intro}}</span>
   <p>{{article.text}}</p>
-</div>
+</article>

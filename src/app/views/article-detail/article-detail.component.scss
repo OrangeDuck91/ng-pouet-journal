@@ -1,4 +1,7 @@
 
+article{
+  text-align: justify;
+}
 // title
 h2{
   font-size: 40px;
@@ -11,15 +14,11 @@ img{
   float: right;
   margin: 0 10px 10px 15px;
   border: 1px solid #0000008f;
-  // border-bottom: 20px solid #0000008f;
   box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
 }
 // Intro
 span{
   font-weight: bold;
 }
-// Article text
-.article-detail{
-  text-align: justify;
-  // font-size: 12px;
-}
+
+

@@ -2,27 +2,36 @@
 
 <form>
 
-  <input type="text" 
-    placeholder="Name" 
-    name="name" 
-    [(ngModel)]="formData.name" 
-    [ngClass]="(errorMessage && !formData.name )? 'hasErrors' : '' "
-    required>
+  <label >
+    Name
+    <input type="text" 
+      placeholder="Ex : Toto" 
+      name="name" 
+      [(ngModel)]="formData.name" 
+      [ngClass]="(errorMessage && !formData.name )? 'hasErrors' : '' "
+      required>
+  </label>
   <br>
 
-  <input type="email" 
-    placeholder="toto@tata.com" 
-    name="email" 
-    [(ngModel)]="formData.email" 
-    [ngClass]="(errorMessage && !formData.email )? 'hasErrors' : '' "
-    required>
+  <label>
+    Email
+    <input type="email" 
+      placeholder="Ex : toto@tata.com" 
+      name="email" 
+      [(ngModel)]="formData.email" 
+      [ngClass]="(errorMessage && !formData.email )? 'hasErrors' : '' "
+      required>
+  </label>
   <br>
 
-  <textarea placeholder="Votre message"
-    name="message"
-    [(ngModel)]="formData.message"
-    [ngClass]="(errorMessage && !formData.message )? 'hasErrors' : '' "
-    required></textarea>
+  <label>Your message
+    <textarea 
+      placeholder="Ex : Your website is not accessible"
+      name="message"
+      [(ngModel)]="formData.message"
+      [ngClass]="(errorMessage && !formData.message )? 'hasErrors' : '' "
+      required></textarea>
+    </label>
   <br>
 
 </form>
@@ -36,6 +45,9 @@
   <!-- This is just a filler div so that the button stays right -->
   <div style="flex:1" [hidden]="errorMessage && messageSent"></div>
 
-  <div class="send-button" (click)="sendMessage()">
-  </div>
+  <button class="send-button" (click)="sendMessage()">
+    <span class="visualyHidden">
+        Send message
+    </span> 
+  </button>
 </div>
