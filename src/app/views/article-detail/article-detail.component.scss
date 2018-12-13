@@ -1,6 +1,9 @@
 
 article{
-  text-align: justify;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 // title
 h2{
@@ -9,10 +12,11 @@ h2{
 }
 // picture
 img{
-  max-width: 300px;
-  max-height: 300px;
-  float: right;
-  margin: 0 10px 10px 15px;
+  max-width: 250px;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
   border: 1px solid #0000008f;
   box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
 }
