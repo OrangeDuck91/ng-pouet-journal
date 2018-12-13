@@ -63,12 +63,12 @@ export class TopNavBarComponent {
 
   constructor() { }
 
-  onEnter(entry: MenuEntry) {
-    entry.ishovered = true;
+  openMenu(entry: MenuEntry) {
+    entry.isOpened = true;
   }
 
-  onLeave(entry: MenuEntry) {
-    entry.ishovered = false;
+  closeMenu(entry: MenuEntry) {
+    entry.isOpened = false;
   }
 
 }

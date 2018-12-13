@@ -3,10 +3,20 @@
   justify-content: space-between;
 }
 
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  padding: 10px;
+  display: block;
+}
+
 .menu-level-1{
 
   position : relative;
-  padding: 10px;
+  // padding: 10px;
   flex: 1;
   text-align: center;
   border-left : 1px solid blue;
@@ -22,8 +32,8 @@
 
     transition: all .2s;
       
-      span{
-        padding: 10px;
+      li{
+        // padding: 10px;
         display: block;
       }
   }
@@ -32,7 +42,7 @@
 .menu-level-1:last-of-type{
   border-right : 1px solid blue;
 }
-.menu-level-1:hover,
-.menu-level-2 span:hover{
+a:hover,
+a:focus{
   background-color: lightblue;
 }

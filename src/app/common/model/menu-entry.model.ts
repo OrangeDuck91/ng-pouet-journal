@@ -1,6 +1,6 @@
 export class MenuEntry {
   title: string;
   route: string;
-  ishovered?: boolean;
+  isOpened?: boolean;
   subMenu?: MenuEntry[];
 }
