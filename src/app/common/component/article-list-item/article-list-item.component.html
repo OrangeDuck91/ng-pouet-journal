@@ -1,8 +1,7 @@
-<article (click)="gotToDetail()">
-  <h2>{{article.title}}</h2>
-  <!-- <h2><a routerLink="/article/{{article.id}}">{{article.title}}</a></h2> -->
-  <div class="article-item-body">
+<article >
+  <h2><a routerLink="/article/{{article.id}}">{{article.title}}</a></h2>
+  <div class="article-item-body" (click)="gotToDetail()">
     <img src="{{article.picture}}" alt="article photo">
     <span>{{article.intro}}</span>
   </div>
-</article>
+</article>        
