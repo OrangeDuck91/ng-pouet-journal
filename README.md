@@ -3,8 +3,8 @@
 This is an exercice project about accessibility. The idea is to have a `original` branch with a news websites that have sone accessibility pitfalls. We will make a new branch for every type of problem we will adress : 
 - `semantic-html`
 - `keyboard-navigation`
-- `colors-&-fonts`
-- `images-&-medias` 
+- `colors-fonts`
+- `images-medias` 
 - etc... (non-exhaustive)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
