@@ -23,14 +23,14 @@ export class ContactUsComponent implements OnInit {
       }, 1500);
       setTimeout(() => {
         this.messageSent = false;
-      }, 4500);
+      }, 5500);
     } else {
       this.errorMessage = true;
-
-      setTimeout(() => {
-        this.errorMessage = false;
-      }, 3000);
     }
+  }
+
+  closeError(){
+    this.errorMessage = false;
   }
 
 }

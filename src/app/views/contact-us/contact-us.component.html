@@ -2,38 +2,48 @@
 
 <form>
 
-  <label >
-    Name
+  <div>
+    <label for="name">Name</label>
+    <div class="error-label" [hidden]="!errorMessage || formData.name">
+      This field must be filled
+    </div>
     <input type="text" 
       placeholder="Ex : Toto" 
       name="name" 
+      id="name" 
       [(ngModel)]="formData.name" 
       [ngClass]="(errorMessage && !formData.name )? 'hasErrors' : '' "
       required>
-  </label>
-  <br>
-
-  <label>
-    Email
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <div class="error-label" [hidden]="!errorMessage || formData.email">
+        This field must be filled
+      </div>
     <input type="email" 
       placeholder="Ex : toto@tata.com" 
       name="email" 
+      id="email" 
       [(ngModel)]="formData.email" 
       [ngClass]="(errorMessage && !formData.email )? 'hasErrors' : '' "
       required>
-  </label>
-  <br>
+    
+  </div>
 
-  <label>Your message
+  <div>
+    <label for="message">Your message</label>
+    <div class="error-label" [hidden]="!errorMessage || formData.message">
+        This field must be filled
+      </div>
     <textarea 
       placeholder="Ex : Your website is not accessible"
       name="message"
+      id="message"
       [(ngModel)]="formData.message"
       [ngClass]="(errorMessage && !formData.message )? 'hasErrors' : '' "
       required></textarea>
-    </label>
-  <br>
-
+      
+  </div>
 </form>
 <div class="form-footer">
   <div class="message-sent" [hidden]="!messageSent"> 
@@ -41,6 +51,7 @@
   </div>
   <div class="error-message" [hidden]="!errorMessage"> 
     All fields must be filled.
+    <div (click)="closeError()">X</div>
   </div>
   <!-- This is just a filler div so that the button stays right -->
   <div style="flex:1" [hidden]="errorMessage && messageSent"></div>

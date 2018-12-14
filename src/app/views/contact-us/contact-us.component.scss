@@ -20,6 +20,12 @@ input.hasErrors, textarea.hasErrors{
   background-color: lightcoral;
 }
 
+.error-label{
+  color:red;
+  font-weight: bold;
+  float: right;
+}
+
 .form-footer{
   display: flex;
   justify-content: space-between;
@@ -32,6 +38,13 @@ input.hasErrors, textarea.hasErrors{
   .error-message{
     background-color: lightcoral;
     border: 2px solid red; 
+    position: relative;
+    div{
+      position: absolute;
+      top: -13px;
+      right: 5px;
+      cursor: pointer;
+    }
   }
 
   .error-message, .message-sent{
