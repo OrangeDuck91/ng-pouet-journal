@@ -78,7 +78,7 @@ a.active-menu{
     cursor: pointer;
   }
 
-  #toogle-nav:hover{
+  #toogle-nav:hover,#toogle-nav:focus{
     background-color: lightblue;
   }
 }
