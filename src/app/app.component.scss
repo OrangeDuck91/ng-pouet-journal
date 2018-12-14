@@ -36,4 +36,7 @@ main a1-top-nav-bar{
 footer{
   height: 30px;
   line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
