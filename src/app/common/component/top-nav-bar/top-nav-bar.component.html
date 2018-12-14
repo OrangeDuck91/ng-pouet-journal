@@ -1,4 +1,7 @@
-<nav>
+<button *ngIf="isSmallScreen" (click)="toogleMenu()" id="toogle-nav">
+  Menu
+</button>
+<nav *ngIf="!isSmallScreen || menuOpened">
   <ul  id="menu">
     <li class="menu-level-1" 
         *ngFor="let menuEntry of menu" 

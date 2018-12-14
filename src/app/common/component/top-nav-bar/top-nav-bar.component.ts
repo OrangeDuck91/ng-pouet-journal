@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuEntry } from '../../model/menu-entry.model';
+import { Observable, fromEvent } from 'rxjs';
+import { debounceTime, map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'a1-top-nav-bar',
   templateUrl: './top-nav-bar.component.html',
   styleUrls: ['./top-nav-bar.component.scss']
 })
-export class TopNavBarComponent {
+export class TopNavBarComponent implements OnInit {
 
   menu: MenuEntry[] = [
     {
@@ -61,7 +63,28 @@ export class TopNavBarComponent {
     }
   ] as MenuEntry[];
 
+  menuOpened = false;
+  isSmallScreen: boolean;
+  isSmallScreen$: Observable<boolean>;
+
   constructor() { }
+
+  ngOnInit() {
+    // Checks if screen size is less than 1024 pixels
+    const checkScreenSize = () => document.body.offsetWidth < 640;
+
+    // Create observable from window resize event debounced so only fires every 500ms
+    const screenSizeChanged$ = fromEvent(window, 'resize').pipe(debounceTime(500), map(checkScreenSize));
+
+    // Start off with the initial value use the isScreenSmall$ | async in the
+    // view to get both the original value and the new value after resize.
+    this.isSmallScreen$ = screenSizeChanged$.pipe(startWith(checkScreenSize()));
+
+    this.isSmallScreen$.subscribe(isSmall => {
+      this.isSmallScreen = isSmall;
+      this.menuOpened = !isSmall;
+    });
+  }
 
   openMenu(entry: MenuEntry) {
     entry.isOpened = true;
@@ -69,6 +92,10 @@ export class TopNavBarComponent {
 
   closeMenu(entry: MenuEntry) {
     entry.isOpened = false;
+  }
+
+  toogleMenu(){
+    this.menuOpened = !this.menuOpened;
   }
 
 }

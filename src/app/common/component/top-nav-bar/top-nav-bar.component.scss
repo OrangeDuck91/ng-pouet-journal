@@ -1,6 +1,9 @@
+
+// Generic rules
 #menu{
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
 
 ul{
@@ -13,36 +16,69 @@ a{
   display: block;
 }
 
-.menu-level-1{
-
-  position : relative;
-  flex: 1;
-  text-align: center;
-  border-left : 1px solid blue;
-
-  .menu-level-2{
-    position: absolute;
-    background-color: white;
-    left: -1px;
-    border: 1px solid blue;
-    border-top: none;
-    width: 100%;
-    top: 38px;
-    transition: all .2s;
-      
-      li{
-        display: block;
-      }
-  }
-}
-
-.menu-level-1:last-of-type{
-  border-right : 1px solid blue;
-}
 a:hover,
 a:focus{
   background-color: lightblue;
 }
 a.active-menu{
   background-color: lightseagreen;
+}
+
+// Big screen rules (inline menu)
+@media (min-width: 40em) {
+
+  .menu-level-1{
+
+    position : relative;
+    flex: 1;
+    text-align: center;
+    border-left : 1px solid blue;
+  
+    .menu-level-2{
+      position: absolute;
+      background-color: white;
+      left: -1px;
+      border: 1px solid blue;
+      border-top: none;
+      width: 100%;
+      top: 38px;
+      transition: all .2s;
+        
+        li{
+          display: block;
+        }
+    }
+  }
+  
+  .menu-level-1:last-of-type{
+    border-right : 1px solid blue;
+  }
+
+}
+
+// Small screen rule (vertical tooglable menu)
+@media (max-width: 39.9999em) {
+  #menu{
+    flex-direction: column;
+  }
+  .menu-level-1{
+    .menu-level-2{
+      padding-left: 40px;
+    }
+  }
+  #toogle-nav{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-right : 1px solid blue;
+    border-left : 1px solid blue;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  #toogle-nav:hover{
+    background-color: lightblue;
+  }
 }
