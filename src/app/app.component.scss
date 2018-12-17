@@ -18,10 +18,22 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  position:relative;
+  // Logo 
   img {
     height: 100px;
     margin : 0 30px;
+  }
+  // Skip main content link
+  a{
+    position: absolute;
+    left : 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  a:focus{
+    opacity: 1;
+    background-color: lightblue;
   }
 }
 
@@ -36,7 +48,21 @@ main a1-top-nav-bar{
 footer{
   height: 30px;
   line-height: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  display:flex;
+  justify-content: space-between;
+
+  span{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 25px;
+  }
+
+  a{
+    min-width: 30%;
+    text-align: right;
+  }
+  a:focus{
+    background-color: lightblue;
+  }
 }

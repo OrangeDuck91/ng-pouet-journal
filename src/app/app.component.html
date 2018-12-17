@@ -1,13 +1,17 @@
 <main>
-  <header>
+  <header id="top">
     <img src="../assets/images/pouet.png" alt="header pouet image">
     <h1>Pouet Journal</h1>
+    <a href="{{currentRoute + '#main-content'}}" >Skip to main content</a>
   </header>
   <a1-top-nav-bar></a1-top-nav-bar>
-  <section class="main-content">
+  <section  id="main-content" class="main-content">
     <router-outlet></router-outlet>
   </section>
   <footer>
-    © Copyright Pouet Journal - All rights reserved
+    <span>
+      © Copyright Pouet Journal - All rights reserved
+    </span>
+    <a href="{{currentRoute + '#top'}}" >Back to top</a>
   </footer>
 </main>
