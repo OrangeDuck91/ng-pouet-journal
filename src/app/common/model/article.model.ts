@@ -5,6 +5,7 @@ export class Article {
   intro: string;
   text: string;
   picture: string;
+  picture_description: string;
   tags: string[];
 }
 

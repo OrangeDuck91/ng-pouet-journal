@@ -11,15 +11,25 @@ h2{
   margin: 15px 0px;
 }
 // picture
-img{
-  max-width: 250px;
-  max-height: 180px;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #0000008f;
-  box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
+figure{
+  text-align: center;
+
+  img{
+    max-width: 250px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #0000008f;
+    box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
+  }
+
+  figcaption{
+    font-size: .7em;
+    font-style: italic;
+  }
 }
+
 // Intro
 span{
   font-weight: bold;
