@@ -1,6 +1,6 @@
 # NgPouetJournal
 ## About
-This is an exercice project about accessibility. The idea is to have a `original` branch with a news websites that have sone accessibility pitfalls. We will make a new branch for every type of problem we will adress : 
+This is an exercice project about accessibility. The idea is to have a `original` branch with a news websites that have some accessibility pitfalls. We will make a new branch for every type of problem we will adress : 
 - `semantic-html`
 - `keyboard-navigation`
 - `colors-fonts`
