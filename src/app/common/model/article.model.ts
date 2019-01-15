@@ -1,12 +1,9 @@
 export class Article {
-
-  id: number;
-  title: string;
-  intro: string;
-  text: string;
-  picture: string;
-  picture_description: string;
-  tags: string[];
+  public id: number;
+  public title: string;
+  public intro: string;
+  public text: string;
+  public picture: string;
+  public pictureDescription: string;
+  public tags: string[];
 }
-
-

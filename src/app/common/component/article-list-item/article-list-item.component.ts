@@ -1,24 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Article } from '../../model/article.model';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { Article } from "../../model/article.model";
 
 @Component({
-  selector: 'a1-article-list-item',
-  templateUrl: './article-list-item.component.html',
-  styleUrls: ['./article-list-item.component.scss']
+  selector: "sii-article-list-item",
+  templateUrl: "./article-list-item.component.html",
+  styleUrls: ["./article-list-item.component.scss"]
 })
-export class ArticleListItemComponent implements OnInit {
-
+export class ArticleListItemComponent {
   @Input()
-  article: Article;
+  public article: Article;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  public gotToDetail() {
+    this.router
+      .navigate(["/article", this.article.id])
+      .catch(err => console.error(err));
   }
-
-  gotToDetail() {
-    this.router.navigate(['/article', this.article.id]);
-  }
-
 }

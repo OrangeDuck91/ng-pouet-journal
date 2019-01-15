@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
-  selector: 'a1-root',
+  selector: 'sii-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ng-pouet-journal';
-  currentRoute: string;
+  public title = 'ng-pouet-journal'
+  public currentRoute: string
 
-  constructor(private router: Router) { }
+  constructor (private router: Router) { }
 
-  ngOnInit() {
+  public ngOnInit () {
     this.router.events.subscribe(() => {
-      this.currentRoute = window.location.pathname;
-      console.log(window.location);
-    });
+      this.currentRoute = window.location.pathname
+    })
   }
 }

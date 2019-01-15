@@ -1,17 +1,30 @@
 {
-    "extends": "../tslint.json",
-    "rules": {
-        "directive-selector": [
-            true,
-            "attribute",
-            "a1",
-            "camelCase"
-        ],
-        "component-selector": [
-            true,
-            "element",
-            "a1",
-            "kebab-case"
-        ]
-    }
+  "extends": [
+    "../tslint.json",
+    "tslint:recommended",
+    "tslint-config-standard"
+  ],
+  "rules": {
+    "ordered-imports":false,
+    "object-literal-sort-keys":false,
+    "member-ordering":false,
+    "space-before-function-paren":false,
+    "no-console": {"severity":"warning"},
+    "quotemark" :false,
+    "semicolon":false,
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    
+    "directive-selector": [
+      true,
+      "attribute",
+      "sii",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "sii",
+      "kebab-case"
+    ]
+  }
 }

@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { ContactFormData } from "../../common/model/contactFormData.model";
 
 @Component({
-  selector: 'a1-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  selector: "sii-contact-us",
+  templateUrl: "./contact-us.component.html",
+  styleUrls: ["./contact-us.component.scss"]
 })
-export class ContactUsComponent implements OnInit {
+export class ContactUsComponent {
+  public formData: ContactFormData = new ContactFormData();
+  public messageSent = false;
+  public errorMessage = false;
 
-  formData: FormData = new FormData();
-  messageSent = false;
-  errorMessage = false;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  sendMessage() {
+  public sendMessage() {
     if (this.formData.isValid()) {
       setTimeout(() => {
         this.messageSent = true;
@@ -29,20 +24,7 @@ export class ContactUsComponent implements OnInit {
     }
   }
 
-  closeError(){
+  public closeError() {
     this.errorMessage = false;
   }
-
 }
-
-class FormData {
-  name: string;
-  email: string;
-  message: string;
-
-  isValid(): boolean {
-    // const res: boolean = (this.name) && (this.email) && (this.message) ? true : false;
-    return  (this.name) && (this.email) && (this.message) ? true : false;
-  }
-}
-
