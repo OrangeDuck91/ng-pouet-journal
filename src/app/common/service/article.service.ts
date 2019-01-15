@@ -4,14 +4,25 @@ import { Article } from "../model/article.model";
 
 @Injectable()
 export class ArticleService {
+  /**
+   * Fetch all articles
+   */
   public getAllArticles(): Observable<Article[]> {
     return of(MOCK_ARTICLES);
   }
 
+  /**
+   * Find an article by Id
+   * @param id - Article id
+   */
   public getArticleById(id: number): Observable<Article> {
     return of(MOCK_ARTICLES.find(art => art.id === id));
   }
 
+  /**
+   * Find articles by tag
+   * @param tag  search tag
+   */
   public getArticlesByTag(tag: string): Observable<Article[]> {
     return of(MOCK_ARTICLES.filter(art => art.tags.includes(tag)));
   }

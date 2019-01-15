@@ -11,19 +11,32 @@ import { Observable } from "rxjs";
   styleUrls: ["./article-list.component.scss"]
 })
 export class ArticleListComponent implements OnInit {
+  /** Article List */
   protected articles: Article[];
 
+  /**
+   * Create an article list component
+   * @param route Current route
+   * @param articleService Article Service
+   */
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService
   ) {}
 
+  /**
+   * Fetch articles on route change
+   */
   public ngOnInit() {
     this.route.params
       .pipe(mergeMap(param => this.getArticlesFromUrlParam(param)))
       .subscribe(articles => (this.articles = articles));
   }
 
+  /**
+   * Fetch articles according to route params
+   * @param param Url param
+   */
   private getArticlesFromUrlParam(param): Observable<Article[]> {
     const { tag } = param;
     return tag

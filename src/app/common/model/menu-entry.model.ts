@@ -1,6 +1,13 @@
+/**
+ * Class representing a Menu entry
+ */
 export class MenuEntry {
-  public title: string
-  public route: string
-  public isOpened?: boolean
-  public subMenu?: MenuEntry[]
+  /** Title */
+  public title: string;
+  /** route to navigate to */
+  public route: string;
+  /** Flag is opened */
+  public isOpened?: boolean;
+  /** Sub-meu list */
+  public subMenu?: MenuEntry[];
 }

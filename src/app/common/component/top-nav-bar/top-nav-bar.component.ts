@@ -9,6 +9,9 @@ import { MenuEntry } from "../../model/menu-entry.model";
   styleUrls: ["./top-nav-bar.component.scss"]
 })
 export class TopNavBarComponent implements OnInit {
+  /**
+   * The menu entries
+   */
   public menu: MenuEntry[] = [
     {
       title: "Home",
@@ -61,11 +64,22 @@ export class TopNavBarComponent implements OnInit {
       route: "/contact"
     }
   ] as MenuEntry[];
-
+  /**
+   * Flag menu opened
+   */
   public menuOpened = false;
+  /**
+   * Flag Screen is small
+   */
   public isSmallScreen: boolean;
+  /**
+   * Observable screen is small
+   */
   public isSmallScreen$: Observable<boolean>;
 
+  /**
+   * Creates an Observable to watch for resize events and bind it to isSmallScreen flag
+   */
   public ngOnInit() {
     // Checks if screen size is less than 1024 pixels
     const checkScreenSize = () => document.body.offsetWidth < 640;
@@ -86,14 +100,25 @@ export class TopNavBarComponent implements OnInit {
     });
   }
 
-  public openMenu(entry: MenuEntry) {
+  /**
+   * Open the meny entry
+   * @param entry - the menu enty to open
+   */
+  public openMenuEntry(entry: MenuEntry) {
     entry.isOpened = true;
   }
 
-  public closeMenu(entry: MenuEntry) {
+  /**
+   * Close the menu entry
+   * @param entry - menu entry to close
+   */
+  public closeMenuEntry(entry: MenuEntry) {
     entry.isOpened = false;
   }
 
+  /**
+   * Open or Close the whole menu
+   */
   public toogleMenu() {
     this.menuOpened = !this.menuOpened;
   }

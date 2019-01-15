@@ -8,11 +8,21 @@ import { Article } from "../../model/article.model";
   styleUrls: ["./article-list-item.component.scss"]
 })
 export class ArticleListItemComponent {
+  /**
+   * The article to display
+   */
   @Input()
   public article: Article;
 
+  /**
+   * Creates an ArticleListItemComponent
+   * @param router - The app router
+   */
   constructor(private router: Router) {}
 
+  /**
+   * Navigates to article page.
+   */
   public gotToDetail() {
     this.router
       .navigate(["/article", this.article.id])
