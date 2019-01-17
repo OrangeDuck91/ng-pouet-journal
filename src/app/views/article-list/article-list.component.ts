@@ -12,7 +12,7 @@ import { Observable } from "rxjs";
 })
 export class ArticleListComponent implements OnInit {
   /** Article List */
-  protected articles: Article[];
+  public articles: Article[];
 
   /**
    * Create an article list component

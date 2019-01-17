@@ -13,6 +13,7 @@
     "quotemark" :false,
     "semicolon":false,
     "arrow-parens": [true, "ban-single-arg-parens"],
+    "one-variable-per-declaration" : false,
     
     "directive-selector": [
       true,

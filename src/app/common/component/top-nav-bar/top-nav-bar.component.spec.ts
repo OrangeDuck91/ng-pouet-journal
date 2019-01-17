@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed, fakeAsync, tick } from "@angular/core/testing";
 import { TopNavBarComponent } from "./top-nav-bar.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import { MenuEntry } from "../../model/menu-entry.model";
@@ -43,16 +43,10 @@ describe("TopNavBarComponent", () => {
     expect(component.menuOpened).toBeFalsy();
   });
 
-  // describe("initObservable", () => {
-  //   beforeEach(() => {
-  //     const observable = Observable.create(obs => {
-  //       // Push one event width a innerWidth of 500 on the stream
-  //       obs.next({ target: { innerWidth: 500 } });
-  //       // Expose function to be able to trigger events
-  //       stub.nextResizeEvent = obs;
-  //     });
-
-  //     spyOn(Observable, "fromEvent").and.returnValue(observable);
-  //   });
-  // });
+  it("should set isSmallScreen propertie", fakeAsync(() => {
+    expect(component.isSmallScreen).toBeUndefined();
+    component.ngOnInit();
+    tick(600);
+    expect(component.isSmallScreen).toBeDefined();
+  }));
 });
