@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "a1",
+      "prefix": "sii",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -82,6 +82,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
+            "codeCoverage": true,
             "styles": [
               "src/styles.scss"
             ],
@@ -100,7 +101,8 @@
               "src/tsconfig.spec.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "src/polyfills.ts"
             ]
           }
         }

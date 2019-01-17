@@ -1,21 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
-  selector: 'a1-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "sii-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  title = 'ng-pouet-journal';
-  currentRoute: string;
+  /** App title */
+  public title = "ng-pouet-journal";
+  /** current route */
+  public currentRoute: string;
 
-  constructor(private router: Router) { }
+  /**
+   * Create the App component
+   * @param router App router
+   */
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-    this.router.events.subscribe(() => {
-      this.currentRoute = window.location.pathname;
-      console.log(window.location);
+  /**
+   * Update the currentRoute attribute when the route change
+   */
+  public ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url.split("#")[0];
+      }
     });
   }
 }
