@@ -1,4 +1,9 @@
-import { TestBed, ComponentFixture, fakeAsync, tick } from "@angular/core/testing";
+import {
+  TestBed,
+  ComponentFixture,
+  fakeAsync,
+  tick
+} from "@angular/core/testing";
 import { AppComponent } from "./app.component";
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 import { SharedModule } from "./common/shared.module";
@@ -40,10 +45,12 @@ describe("AppComponent", () => {
 
   it(`should update currentRoute when route changes, ignoring fragment`, fakeAsync(() => {
     app.ngOnInit();
-    router.navigate(["/home"], { fragment: "top" }).then(() => {
-      console.log(location);
-      expect(app.currentRoute).toBe("/home");
-    });
+    router
+      .navigate(["/home"], { fragment: "top" })
+      .then(() => {
+        expect(app.currentRoute).toBe("/home");
+      })
+      .catch(err => console.error(err));
     tick();
   }));
 });
