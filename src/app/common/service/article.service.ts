@@ -27,6 +27,7 @@ export class ArticleService {
     return of(MOCK_ARTICLES.filter(art => art.tags.includes(tag)));
   }
 }
+<<<<<<< HEAD
 /* tslint:disable max-line-length */
 const MOCK_ARTICLES = [
   {
@@ -99,5 +100,7 @@ const MOCK_ARTICLES = [
     tags: ["politics", "france", "yellow jacket"]
   }
 ] as Article[];
+=======
+>>>>>>> add calls to article api
 
-/* tslint:enable max-line-length */
+
