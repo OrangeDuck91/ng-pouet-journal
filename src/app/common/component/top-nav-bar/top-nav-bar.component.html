@@ -5,10 +5,10 @@
   <ul  id="menu">
     <li class="menu-level-1" 
         *ngFor="let menuEntry of menu" 
-        (mouseenter)="openMenu(menuEntry)" 
-        (mouseleave)="closeMenu(menuEntry)"
-        (focusin)="openMenu(menuEntry)" 
-        (focusout)="closeMenu(menuEntry)">
+        (mouseenter)="openMenuEntry(menuEntry)" 
+        (mouseleave)="closeMenuEntry(menuEntry)"
+        (focusin)="openMenuEntry(menuEntry)" 
+        (focusout)="closeMenuEntry(menuEntry)">
       <span>
         <a [routerLink]="menuEntry.route"   
            routerLinkActive="active-menu"
