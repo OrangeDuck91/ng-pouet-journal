@@ -1,3 +1,4 @@
+@import '../../../colors';
 input[type=text], 
 select, 
 textarea,
@@ -6,7 +7,7 @@ input[type=email] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid $input-border-color;
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -17,11 +18,11 @@ textarea{
 }
 
 input.hasErrors, textarea.hasErrors{
-  background-color: lightcoral;
+  background-color: $error-bg-color;
 }
 
 .error-label{
-  color:red;
+  color:$error-border-color;
   font-weight: bold;
   float: right;
 }
@@ -32,12 +33,12 @@ input.hasErrors, textarea.hasErrors{
   margin-bottom: 5px;
 
   .message-sent{
-    background-color: lightgreen;
-    border: 2px solid green; 
+    background-color: $valid-bg-color;
+    border: 2px solid $valid-border-color; 
   }
   .error-message{
-    background-color: lightcoral;
-    border: 2px solid red; 
+    background-color: $error-bg-color;
+    border: 2px solid $error-border-color; 
     position: relative;
     div{
       position: absolute;

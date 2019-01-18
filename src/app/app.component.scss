@@ -1,3 +1,4 @@
+@import "../colors";
 main{
   display: flex;
   flex-direction: column;
@@ -9,8 +10,8 @@ main{
       width: 60%;
       padding: 10px 50px;
       margin: 10px 0;
-      box-shadow: 2px 0px 20px 0px rgba(0,0,0,0.5);
-      background-color: white;
+      box-shadow: 2px 0px 20px 0px $box-shadow-color;
+      background-color: $main-cards-color;
    }
 }
 
@@ -33,7 +34,7 @@ header{
   }
   a:focus{
     opacity: 1;
-    background-color: lightblue;
+    background-color: $focused-color;
   }
 }
 
@@ -63,6 +64,6 @@ footer{
     text-align: right;
   }
   a:focus{
-    background-color: lightblue;
+    background-color: $focused-color;
   }
 }

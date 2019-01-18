@@ -1,4 +1,4 @@
-
+@import '../../../colors';
 article{
   text-align: left;
   display: flex;
@@ -20,8 +20,8 @@ figure{
     width: auto;
     height: auto;
     object-fit: cover;
-    border: 1px solid #0000008f;
-    box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.5);
+    border: 1px solid $img-border-color;
+    box-shadow: 1px 0px 10px 0px $box-shadow-color;
   }
 
   figcaption{

@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { ArticleDetailComponent } from "src/app/views/article-detail/article-detail.component";
 import { ViewsModule } from "src/app/views/views.module";
+import { throwError } from "rxjs";
 
 describe("ArticleListItemComponent", () => {
   let component: ArticleListItemComponent;
@@ -16,7 +17,7 @@ describe("ArticleListItemComponent", () => {
   beforeEach(() => {
     // Mock for router.navigate function
     routerStub = {
-      navigate: jasmine.createSpy("navigate").and.returnValue(new Promise(null))
+      navigate: jasmine.createSpy("navigate")
     };
 
     TestBed.configureTestingModule({
@@ -35,15 +36,21 @@ describe("ArticleListItemComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create ArticleDetailComponent", () => {
+  it("should create ArticleListItemComponent", () => {
     expect(component).toBeTruthy();
   });
 
   it("should navigate to detail", async(() => {
+    routerStub.navigate.and.returnValue(new Promise(null));
     component.gotToDetail();
     expect(routerStub.navigate).toHaveBeenCalledWith([
       "/article",
       component.article.id
     ]);
   }));
+  // it("should handle navigation errors", async(() => {
+  //   routerStub.navigate.and.returnValue(throwError("navigation failure"));
+  //   component.gotToDetail();
+  //   expect(console.error).toHaveBeenCalledWith();
+  // }));
 });

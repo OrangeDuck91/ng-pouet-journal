@@ -1,4 +1,4 @@
-
+@import "../../../../colors.scss";
 // Generic rules
 #menu{
   display: flex;
@@ -18,10 +18,10 @@ a{
 
 a:hover,
 a:focus{
-  background-color: lightblue;
+  background-color:$focused-color;
 }
 a.active-menu{
-  background-color: lightseagreen;
+  background-color: $active-menu-color;
 }
 
 // Big screen rules (inline menu)
@@ -32,13 +32,13 @@ a.active-menu{
     position : relative;
     flex: 1;
     text-align: center;
-    border-left : 1px solid blue;
+    border-left : 1px solid $menu-border-color;
   
     .menu-level-2{
       position: absolute;
-      background-color: white;
+      background-color: $main-cards-color;
       left: -1px;
-      border: 1px solid blue;
+      border: 1px solid $menu-border-color;
       border-top: none;
       width: 100%;
       top: 38px;
@@ -51,7 +51,7 @@ a.active-menu{
   }
   
   .menu-level-1:last-of-type{
-    border-right : 1px solid blue;
+    border-right : 1px solid $menu-border-color;
   }
 
 }
@@ -72,13 +72,13 @@ a.active-menu{
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    border-right : 1px solid blue;
-    border-left : 1px solid blue;
-    background-color: white;
+    border-right : 1px solid $menu-border-color;
+    border-left : 1px solid $menu-border-color;
+    background-color: $main-cards-color;
     cursor: pointer;
   }
 
   #toogle-nav:hover,#toogle-nav:focus{
-    background-color: lightblue;
+    background-color: $focused-color;
   }
 }

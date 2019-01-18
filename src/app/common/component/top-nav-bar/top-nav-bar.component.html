@@ -18,7 +18,7 @@
       </span>
       <ul class="menu-level-2" 
           *ngIf="menuEntry.subMenu" 
-          [ngClass]="{'visualyHidden' : !menuEntry.isOpened }">
+          [ngClass]="{'visualy-hidden' : !menuEntry.isOpened }">
         <li *ngFor="let menusubEntry of menuEntry.subMenu">
           <a [routerLink]="menusubEntry.route"  
              routerLinkActive="active-menu">

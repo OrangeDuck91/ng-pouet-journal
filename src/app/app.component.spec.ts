@@ -17,7 +17,6 @@ describe("AppComponent", () => {
   let fixture: ComponentFixture<AppComponent>;
   let app: AppComponent;
   let router: Router;
-  let location: Location;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -35,7 +34,6 @@ describe("AppComponent", () => {
     fixture = TestBed.createComponent(AppComponent);
     app = fixture.debugElement.componentInstance;
     router = TestBed.get(Router);
-    location = TestBed.get(Location);
     router.initialNavigation();
   });
 

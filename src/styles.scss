@@ -1,16 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-  margin:0;
-  padding : 0;
-  background-color: #c6cde2;
+@import "colors";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background;
   font-family: Arial, Helvetica, sans-serif;
 }
-  
-a{
-  color: black;
+
+a {
+  color: $link-color;
 }
 
-.visualyHidden{
+.visualy-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -19,5 +20,4 @@ a{
   padding: 0;
   position: absolute;
   white-space: nowrap;
-
 }
