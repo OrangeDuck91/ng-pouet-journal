@@ -48,9 +48,4 @@ describe("ArticleListItemComponent", () => {
       component.article.id
     ]);
   }));
-  // it("should handle navigation errors", async(() => {
-  //   routerStub.navigate.and.returnValue(throwError("navigation failure"));
-  //   component.gotToDetail();
-  //   expect(console.error).toHaveBeenCalledWith();
-  // }));
 });
