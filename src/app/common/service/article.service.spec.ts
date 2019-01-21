@@ -1,15 +1,18 @@
 import { TestBed } from "@angular/core/testing";
 
 import { ArticleService } from "./article.service";
-import { HttpClientTestingModule, HttpTestingController } from "@angular/common/http/testing";
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from "@angular/common/http/testing";
 
 describe("ArticleService", () => {
   let service: ArticleService;
   let httpMock: HttpTestingController;
-  beforeEach(async() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule],
-        providers: [ArticleService]
+      imports: [HttpClientTestingModule],
+      providers: [ArticleService]
     });
 
     service = TestBed.get(ArticleService);
@@ -25,8 +28,10 @@ describe("ArticleService", () => {
       expect(value.length).toEqual(6);
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/article-api/articles');
-    expect(req.request.method).toEqual('GET');
+    const req = httpMock.expectOne(
+      "http://localhost:8080/article-api/articles"
+    );
+    expect(req.request.method).toEqual("GET");
 
     httpMock.verify();
   });
@@ -36,19 +41,23 @@ describe("ArticleService", () => {
       expect(value.id).toEqual(3);
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/article-api/articles/3');
-    expect(req.request.method).toEqual('GET');
+    const req = httpMock.expectOne(
+      "http://localhost:8080/article-api/articles/3"
+    );
+    expect(req.request.method).toEqual("GET");
 
     httpMock.verify();
   });
 
   it("getArticlesByTag should return 6 articles", () => {
-    service.getArticlesByTag('science').subscribe(value => {
+    service.getArticlesByTag("science").subscribe(value => {
       expect(value.length).toEqual(2);
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/article-api/tags/science/articles');
-    expect(req.request.method).toEqual('GET');
+    const req = httpMock.expectOne(
+      "http://localhost:8080/article-api/tags/science/articles"
+    );
+    expect(req.request.method).toEqual("GET");
 
     httpMock.verify();
   });
