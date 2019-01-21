@@ -5,11 +5,6 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { catchError } from "rxjs/operators";
 
 const endpoint = "http://localhost:8080/article-api";
-const httpOptions = {
-  headers: new HttpHeaders({
-    "Content-Type": "application/json"
-  })
-};
 
 @Injectable()
 export class ArticleService {
