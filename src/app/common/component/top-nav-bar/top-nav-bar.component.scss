@@ -18,10 +18,12 @@ a{
 
 a:hover,
 a:focus{
-  background-color:$focused-color;
+  background-color:$focused-bg-color;
+  color:$focused-color;
 }
 a.active-menu{
-  background-color: $active-menu-color;
+  background-color: $active-menu-bg-color;
+  color: $active-menu-color;
 }
 
 // Big screen rules (inline menu)

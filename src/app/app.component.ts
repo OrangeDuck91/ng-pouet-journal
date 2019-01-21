@@ -7,8 +7,6 @@ import { Router, NavigationEnd } from "@angular/router";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  /** App title */
-  public title = "ng-pouet-journal";
   /** current route */
   public currentRoute: string;
 

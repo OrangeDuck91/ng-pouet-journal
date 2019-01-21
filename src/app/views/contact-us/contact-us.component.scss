@@ -60,17 +60,17 @@ input.hasErrors, textarea.hasErrors{
   
   .send-button{
     border-radius: 2px;
-    background-color: lightblue;
+    background-color: $button-bg-color;
     background-image: url('/assets/images/send.png');
     height: 50px;
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: 2px solid #c6cde2;
+    border: 2px solid $button-border-hover;
     cursor: pointer;
   }
   .send-button:hover{
-    border: 2px solid #101415;
+    border: 2px solid $button-border;
   }
 }

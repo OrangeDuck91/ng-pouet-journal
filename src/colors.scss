@@ -1,14 +1,22 @@
-$background: #c6cde2;
-$link-color: black;
+// $background: #c6cde2;
+$background: #88b4dc;
+$text-color: #000000;
 $main-cards-color: white;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
-$focused-color : lightblue;
-$active-menu-color : lightseagreen;
-$menu-border-color : blue;
+
+$focused-bg-color : #005aa2;
+$focused-color : white;
+$active-menu-bg-color : #005aa2;
+$active-menu-color : white;
+$menu-border-color : #005aa2;
 $artcle-bottom-line : #8080806b;
-$img-border-color : #0000008f;
+$img-border-color : #312d2d8f;
 $input-border-color: #ccc;
 $error-bg-color : lightcoral;
 $error-border-color : red;
 $valid-bg-color : lightgreen;
 $valid-border-color : green;
+
+$button-border-hover: #c6cde2;
+$button-border: #101415;
+$button-bg-color: lightblue;

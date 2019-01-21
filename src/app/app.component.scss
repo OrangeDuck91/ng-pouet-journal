@@ -22,8 +22,8 @@ header{
   position:relative;
   // Logo 
   img {
-    height: 100px;
-    margin : 0 30px;
+    height: 70px;
+    margin: 0 30px 0 0;
   }
   // Skip main content link
   a{
@@ -32,9 +32,11 @@ header{
     bottom: 0;
     opacity: 0;
   }
+  a:hover,
   a:focus{
     opacity: 1;
-    background-color: $focused-color;
+    background-color: $focused-bg-color;
+    color: $focused-color;
   }
 }
 
@@ -63,7 +65,8 @@ footer{
     min-width: 30%;
     text-align: right;
   }
-  a:focus{
-    background-color: $focused-color;
+  a:focus,a:hover{
+    background-color: $focused-bg-color;
+    color: $focused-color;
   }
 }
