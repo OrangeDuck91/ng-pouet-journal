@@ -1,14 +1,15 @@
 @import "../../../../colors.scss";
-h2:hover,
+a:hover,
 a:focus{
-  background-color: $focused-color;
+  background-color: $focused-bg-color;
+  color: $focused-color;
 }
 .article-item-body{
   
   cursor: pointer;  
   display : flex;
   font-weight: bold;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
   
   img{
     flex: 1;
